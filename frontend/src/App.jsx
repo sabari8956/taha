@@ -31,10 +31,14 @@ export default function App() {
       .catch((e) => setSnapshotError(e.message || 'Snapshot unavailable'))
     fetchQuestions()
       .then((list) => {
-        setKnownQuestions(list)
-        setQuickQuestions(list.slice(0, 4).map((q) => q.question))
+        setKnownQuestions(Array.isArray(list) ? list : [])
+        setQuickQuestions((Array.isArray(list) ? list : []).slice(0, 4).map((q) => q.question))
       })
-      .catch(() => setQuickQuestions([]))
+      .catch((e) => {
+        console.error('Unable to load questions', e)
+        setKnownQuestions([])
+        setQuickQuestions([])
+      })
   }, [])
 
   useEffect(() => {
