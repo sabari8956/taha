@@ -26,7 +26,9 @@ export default function App() {
   const timerRef = useRef(null)
 
   useEffect(() => {
-    fetchSnapshot().then(setSnapshot).catch((e) => setSnapshotError(e.message))
+    fetchSnapshot()
+      .then(setSnapshot)
+      .catch((e) => setSnapshotError(e.message || 'Snapshot unavailable'))
     fetchQuestions()
       .then((list) => {
         setKnownQuestions(list)
@@ -62,7 +64,7 @@ export default function App() {
       const result = await askQuestion(value, matched?.id)
       setMessages((m) => [...m, { id: uid(), role: 'assistant', result }])
     } catch (error) {
-      setMessages((m) => [...m, { id: uid(), role: 'error', text: error.message }])
+      setMessages((m) => [...m, { id: uid(), role: 'error', text: error?.message || 'Unable to process the request.' }])
     } finally {
       setRunning(false)
     }

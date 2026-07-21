@@ -1,13 +1,14 @@
 const BASE = import.meta.env.VITE_API_BASE ?? ''
 
 async function request(path, options) {
-  const res = await fetch(`${BASE}${path}`, options)
+  const res = await fetch(`${BASE}${path}`, { cache: 'no-store', ...options })
   let body = null
   try {
     body = await res.json()
   } catch {
     // no JSON body
   }
+  if (!body && !res.ok) throw new Error(`Request failed (${res.status})`)
   if (!res.ok) {
     const message = body?.error?.message || `Request failed (${res.status})`
     throw new Error(message)
