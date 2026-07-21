@@ -7,7 +7,7 @@ BRONZE_MANIFEST="${BRONZE_MANIFEST:-$DATA_ROOT/bronze/current/manifest.json}"
 RAG_INDEX="${RAG_INDEX:-$DATA_ROOT/artifacts/rag/chroma}"
 QUESTIONS="${QUESTIONS_PATH:-/app/data/questions.json}"
 
-exec gunicorn \
+exec /app/.venv/bin/gunicorn \
   --bind "0.0.0.0:${PORT:-5057}" \
   --workers "${WEB_CONCURRENCY:-1}" \
   --timeout "${GUNICORN_TIMEOUT:-300}" \
