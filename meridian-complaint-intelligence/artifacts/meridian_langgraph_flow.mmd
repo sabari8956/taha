@@ -1,0 +1,28 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	agent_planner(agent_planner)
+	coverage_check(coverage_check)
+	abstain(abstain)
+	safe_sql_analysis(safe_sql_analysis)
+	filtered_narrative_retrieval(filtered_narrative_retrieval)
+	grounded_synthesis(grounded_synthesis)
+	citation_and_claim_validation(citation_and_claim_validation)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> agent_planner;
+	agent_planner --> coverage_check;
+	coverage_check -.-> abstain;
+	coverage_check -. &nbsp;narrative&nbsp; .-> filtered_narrative_retrieval;
+	coverage_check -. &nbsp;combined&nbsp; .-> safe_sql_analysis;
+	filtered_narrative_retrieval --> grounded_synthesis;
+	grounded_synthesis --> citation_and_claim_validation;
+	safe_sql_analysis --> filtered_narrative_retrieval;
+	abstain --> __end__;
+	citation_and_claim_validation --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

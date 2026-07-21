@@ -1,0 +1,32 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# JavaScript dependencies and caches
+node_modules/
+frontend/node_modules/
+frontend/.vite/
+
+# Pi agent session artifacts
+.pi-subagents/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Generated reports and build output
+frontend/dist/
+report.html
+
+# Keep source data and databases tracked intentionally for this repository.
+# Do not add database ignore rules here.

@@ -1,0 +1,1941 @@
+{
+  "q01": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "24927b0c5b451070386919b951e0809506cc21c57dae08d7cef0b53f5fa19ffd",
+    "limitations": [],
+    "mode": "narrative",
+    "provenance": {
+      "gold_database": null,
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "What are consumers most upset about when it comes to debt collection, and what kinds of experiences do they describe?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "8933644",
+          "distance": 0.7136577367782593,
+          "excerpt_sha256": "e45af283936d51469d1829af9a76dac270a2cb26d1ff1743ed19390028899a80",
+          "metadata": {
+            "brand_name": "",
+            "company": "Credit Corp Solutions Inc.",
+            "company_key": "credit corp solutions inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "8933644",
+            "date_received": "2024-05-05",
+            "issue": "Took or threatened to take negative or legal action",
+            "narrative_truncated": "false",
+            "product": "Debt collection",
+            "state": "NY",
+            "sub_issue": "Threatened or suggested your credit would be damaged",
+            "sub_product": "Credit card debt",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "10674178",
+          "distance": 0.724010169506073,
+          "excerpt_sha256": "7ed032885409bf2db2de4cce11ae44ab4560d9501296d525e76fa44c7dd2a047",
+          "metadata": {
+            "brand_name": "",
+            "company": "TrueAccord Corp.",
+            "company_key": "trueaccord corp",
+            "company_response": "Closed with explanation",
+            "complaint_id": "10674178",
+            "date_received": "2024-11-04",
+            "issue": "Attempts to collect debt not owed",
+            "narrative_truncated": "false",
+            "product": "Debt collection",
+            "state": "PA",
+            "sub_issue": "Debt was paid",
+            "sub_product": "Credit card debt",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "15461934",
+          "distance": 0.7489790916442871,
+          "excerpt_sha256": "36c4920d73de5c36ad5c7b33e78c91667e9467afad6438a994962be98d03a97a",
+          "metadata": {
+            "brand_name": "",
+            "company": "Opportunity Financial, LLC",
+            "company_key": "opportunity financial llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "15461934",
+            "date_received": "2025-08-22",
+            "issue": "Communication tactics",
+            "narrative_truncated": "false",
+            "product": "Debt collection",
+            "state": "MS",
+            "sub_issue": "Frequent or repeated calls",
+            "sub_product": "Payday loan debt",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8599417",
+          "distance": 0.7547842264175415,
+          "excerpt_sha256": "f19a8497a22497cb542cde744f62c1b93c477e367e5b7b04be5eeb7fc978774a",
+          "metadata": {
+            "brand_name": "",
+            "company": "Goal Structured Solutions, LLC",
+            "company_key": "goal structured solutions llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "8599417",
+            "date_received": "2024-03-21",
+            "issue": "False statements or representation",
+            "narrative_truncated": "false",
+            "product": "Debt collection",
+            "state": "SC",
+            "sub_issue": "Attempted to collect wrong amount",
+            "sub_product": "Private student loan debt",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9913884",
+          "distance": 0.7621337175369263,
+          "excerpt_sha256": "e1f3ecaf6237a39d93a4c74781379816031541ad3e5313fe1ed40f50a1bd8891",
+          "metadata": {
+            "brand_name": "",
+            "company": "Absolute Resolutions Corp.",
+            "company_key": "absolute resolutions corp",
+            "company_response": "Closed with explanation",
+            "complaint_id": "9913884",
+            "date_received": "2024-08-26",
+            "issue": "Attempts to collect debt not owed",
+            "narrative_truncated": "false",
+            "product": "Debt collection",
+            "state": "VA",
+            "sub_issue": "Debt is not yours",
+            "sub_product": "Credit card debt",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "12250531",
+          "distance": 0.7696965932846069,
+          "excerpt_sha256": "4cf2ba211feb2dd7865da365f40a8025c77daf8f1add4d1aee28cc779bd28e35",
+          "metadata": {
+            "brand_name": "",
+            "company": "Portfolio Recovery Associates, LLC",
+            "company_key": "portfolio recovery associates llc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "12250531",
+            "date_received": "2025-02-28",
+            "issue": "Attempts to collect debt not owed",
+            "narrative_truncated": "false",
+            "product": "Debt collection",
+            "state": "AZ",
+            "sub_issue": "Debt is not yours",
+            "sub_product": "I do not know",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8857296",
+          "distance": 0.771368145942688,
+          "excerpt_sha256": "da17ef93ac2c56838e73daa6409f549416958baf00d9128371a4b1d0d2953756",
+          "metadata": {
+            "brand_name": "",
+            "company": "CCS Financial Services, Inc.",
+            "company_key": "ccs financial services inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "8857296",
+            "date_received": "2024-04-25",
+            "issue": "Written notification about debt",
+            "narrative_truncated": "true",
+            "product": "Debt collection",
+            "state": "CA",
+            "sub_issue": "Didn't receive notice of right to dispute",
+            "sub_product": "I do not know",
+            "timely_response": "true"
+          },
+          "truncated": true
+        },
+        {
+          "complaint_id": "15990443",
+          "distance": 0.7715442776679993,
+          "excerpt_sha256": "719bb4ca3a51451e8d9d776f0fe9c0ea417e19067f7fd0486eaccaf9bf5dbfc8",
+          "metadata": {
+            "brand_name": "",
+            "company": "TekCollect Inc.",
+            "company_key": "tekcollect inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "15990443",
+            "date_received": "2025-09-17",
+            "issue": "Attempts to collect debt not owed",
+            "narrative_truncated": "false",
+            "product": "Debt collection",
+            "state": "FL",
+            "sub_issue": "Debt was already discharged in bankruptcy and is no longer owed",
+            "sub_product": "Other debt",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": null,
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": "Debt collection",
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": null
+  },
+  "q02": null,
+  "q03": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "0a698e83c4a2aebb4c01b9d4eb354e95a7b6493a2fe933176959c9097cedc90e",
+    "limitations": [],
+    "mode": "combined",
+    "provenance": {
+      "gold_database": "/Users/sabari/Work/sudo-sapient/projects/taha/meridian-complaint-intelligence/gold/.generations/e81adbc6911540249a5404f84c0488f7/metrics.duckdb",
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "Of the ten companies with the most complaints overall, which one is worst at responding on time \u2014 and what do consumers say happened in those late cases?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "11899931",
+          "distance": 1.0892767906188965,
+          "excerpt_sha256": "9076de06e17a5674f83fa6a5d01e736c49fe91d2fa338efbfee4ab197e2ce27a",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11899931",
+            "date_received": "2025-02-03",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "TX",
+            "sub_issue": "Funds not handled or disbursed as instructed",
+            "sub_product": "Checking account",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "16902242",
+          "distance": 1.1047070026397705,
+          "excerpt_sha256": "9e8bb58ae87f5f94de28f72af91cadf15f9ff1261b0c74513752ce0e8aca8ac3",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "16902242",
+            "date_received": "2025-10-29",
+            "issue": "Problem with additional add-on products or services",
+            "narrative_truncated": "false",
+            "product": "Payday loan, title loan, personal loan, or advance loan",
+            "state": "FL",
+            "sub_issue": "",
+            "sub_product": "Personal line of credit",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11908244",
+          "distance": 1.1140732765197754,
+          "excerpt_sha256": "d7d4680c0cdd029568c4313d7f72132196b9e2aa6552cbc1d4dbeb69d5977ba5",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11908244",
+            "date_received": "2025-02-03",
+            "issue": "Confusing or misleading advertising or marketing",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "VA",
+            "sub_issue": "",
+            "sub_product": "Mobile or digital wallet",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "14198801",
+          "distance": 1.1143887042999268,
+          "excerpt_sha256": "58c385552145b5993bc8ac4a4c0a92e6240bd69b898ef5f1a0748867991ba165",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "14198801",
+            "date_received": "2025-06-20",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "SC",
+            "sub_issue": "Funds not handled or disbursed as instructed",
+            "sub_product": "Checking account",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11937726",
+          "distance": 1.1156482696533203,
+          "excerpt_sha256": "3ae2398a5ea7bda8f0768a4c85808f4e43bc7aade71b88d0db827b89003e977f",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11937726",
+            "date_received": "2025-02-04",
+            "issue": "Confusing or misleading advertising or marketing",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "VA",
+            "sub_issue": "",
+            "sub_product": "Mobile or digital wallet",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "13065482",
+          "distance": 1.1180343627929688,
+          "excerpt_sha256": "22806b3d83204849082e30c997c21566132a2c83957d10770e945a5ee6f747a5",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "13065482",
+            "date_received": "2025-04-18",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "CA",
+            "sub_issue": "Problem using a debit or ATM card",
+            "sub_product": "Checking account",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "14443725",
+          "distance": 1.1194809675216675,
+          "excerpt_sha256": "3703718f18342af423cd4f0fee7c4e82a03c4deb8524027dd473ab6372d21f2e",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "14443725",
+            "date_received": "2025-07-03",
+            "issue": "Problem with a purchase or transfer",
+            "narrative_truncated": "false",
+            "product": "Prepaid card",
+            "state": "TN",
+            "sub_issue": "Card company isn't resolving a dispute about a purchase or transfer",
+            "sub_product": "General-purpose prepaid card",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "14120881",
+          "distance": 1.124265193939209,
+          "excerpt_sha256": "cb4c43f5de64dc8e835a72f70b806c65816c696f1879f0ec9141ae123a7594cd",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "14120881",
+            "date_received": "2025-06-17",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "TX",
+            "sub_issue": "Funds not handled or disbursed as instructed",
+            "sub_product": "Checking account",
+            "timely_response": "false"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": null,
+        "company": "Block, Inc.",
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": null,
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": false
+      },
+      "status": "ok"
+    },
+    "structured": {
+      "executed_sql": "WITH company_scope AS (SELECT \"company\", sum(\"complaint_count\") AS \"complaint_count\", sum(\"timely_response_count\") AS \"timely_response_count\", sum(\"timely_response_known_count\") AS \"timely_response_known_count\" FROM \"company_month_metrics\" GROUP BY \"company\"), volume_cohort AS (SELECT *, \"timely_response_count\"::DOUBLE / nullif(\"timely_response_known_count\", 0) AS \"timely_response_rate\" FROM company_scope ORDER BY \"complaint_count\" DESC, \"company\" ASC LIMIT 10) SELECT \"company\", \"complaint_count\", \"timely_response_count\", \"timely_response_known_count\", \"timely_response_rate\" FROM volume_cohort ORDER BY \"timely_response_rate\" ASC NULLS LAST, \"company\" ASC LIMIT 1",
+      "parameters": [],
+      "rows": [
+        {
+          "company": "Block, Inc.",
+          "complaint_count": 40272,
+          "timely_response_count": 39684,
+          "timely_response_known_count": 40272,
+          "timely_response_rate": 0.985399284862932
+        }
+      ],
+      "source_database": "/Users/sabari/Work/sudo-sapient/projects/taha/meridian-complaint-intelligence/gold/.generations/e81adbc6911540249a5404f84c0488f7/metrics.duckdb"
+    }
+  },
+  "q04": null,
+  "q05": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "8f861847b54057547ae09f87982223bb34d2a3fa0794e4ffd45c08cfc8fe99a7",
+    "limitations": [],
+    "mode": "narrative",
+    "provenance": {
+      "gold_database": null,
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "When people try to get errors fixed on their credit reports, what do they say goes wrong with the process?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "8204618",
+          "distance": 0.748478889465332,
+          "excerpt_sha256": "0d31f239a9a41bc0d1d9ec4a95b31ae8129388b61b1fad196f90411ba65e44fc",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "8204618",
+            "date_received": "2024-01-23",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "GA",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9655097",
+          "distance": 0.7600639462471008,
+          "excerpt_sha256": "4918f5aa1a8095912b206a6589b1367201401194f1660ba7bbec03b8b5839d48",
+          "metadata": {
+            "brand_name": "",
+            "company": "Experian Information Solutions Inc.",
+            "company_key": "experian information solutions inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "9655097",
+            "date_received": "2024-07-30",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "GA",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8718573",
+          "distance": 0.7650694251060486,
+          "excerpt_sha256": "50fd7c6269bc0c6e46837209745f887e8324585f131ba2dc584f96481f14f46c",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "8718573",
+            "date_received": "2024-04-08",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "TX",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "10113251",
+          "distance": 0.766343891620636,
+          "excerpt_sha256": "3d5b417ab8d1d2396da1cbb4f0a54b9502fc6cf75f78b70cd9999a6a55339d3e",
+          "metadata": {
+            "brand_name": "",
+            "company": "Experian Information Solutions Inc.",
+            "company_key": "experian information solutions inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "10113251",
+            "date_received": "2024-09-13",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "IL",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8450211",
+          "distance": 0.7674947381019592,
+          "excerpt_sha256": "5d4bb892269beeb01d4baf3bb9029da5e79db74a72c2bd1b5eb2a38543bf8407",
+          "metadata": {
+            "brand_name": "",
+            "company": "Experian Information Solutions Inc.",
+            "company_key": "experian information solutions inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "8450211",
+            "date_received": "2024-02-29",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "GA",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "12269263",
+          "distance": 0.769051194190979,
+          "excerpt_sha256": "9c638791b5d92309bbcdacb712da6c02944cd876ed58408094ee0915f536f2a3",
+          "metadata": {
+            "brand_name": "",
+            "company": "EQUIFAX, INC.",
+            "company_key": "equifax inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "12269263",
+            "date_received": "2025-02-27",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "FL",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "14143254",
+          "distance": 0.7692819237709045,
+          "excerpt_sha256": "39c04cc923021adf53473c41ab4b5d1f23356073384135d8ea70113d3e461861",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "14143254",
+            "date_received": "2025-06-18",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "FL",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9288608",
+          "distance": 0.7698702216148376,
+          "excerpt_sha256": "89f56f38adbf8c8b43b1b6570c9f1c4f5ab34dc53f2ba64752c0ece7e90ad504",
+          "metadata": {
+            "brand_name": "",
+            "company": "Experian Information Solutions Inc.",
+            "company_key": "experian information solutions inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "9288608",
+            "date_received": "2024-06-18",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "FL",
+            "sub_issue": "Their investigation did not fix an error on your report",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": null,
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": "Credit reporting or other personal consumer reports",
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": null
+  },
+  "q06": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "Zelle",
+      "input_value": "Zelle",
+      "legal_company": "Early Warning Services, LLC",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "837aa554c3c9da60c03303f82ba9ec877ca151fa664a2a120c15feade313e113",
+    "limitations": [],
+    "mode": "narrative",
+    "provenance": {
+      "gold_database": null,
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "What kinds of scams and fraud do consumers describe in complaints involving Zelle?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "11644248",
+          "distance": 0.49951305985450745,
+          "excerpt_sha256": "8a416e434d318c12ffbb3085de266141d0d6ea27e36e5d6a85cfe5d3b6b48fdd",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11644248",
+            "date_received": "2025-01-18",
+            "issue": "Fraud or scam",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "NY",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "12184920",
+          "distance": 0.5048052072525024,
+          "excerpt_sha256": "c5e0ed2e08608fa85bd387c1009de680cfaaf10f56c6247d0bbfb5f2f7efb174",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "12184920",
+            "date_received": "2025-02-23",
+            "issue": "Fraud or scam",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "GA",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11542008",
+          "distance": 0.505584716796875,
+          "excerpt_sha256": "c5e0ed2e08608fa85bd387c1009de680cfaaf10f56c6247d0bbfb5f2f7efb174",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11542008",
+            "date_received": "2025-01-16",
+            "issue": "Fraud or scam",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "CA",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11664680",
+          "distance": 0.5066218376159668,
+          "excerpt_sha256": "c5e0ed2e08608fa85bd387c1009de680cfaaf10f56c6247d0bbfb5f2f7efb174",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11664680",
+            "date_received": "2025-01-17",
+            "issue": "Fraud or scam",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "MS",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11551849",
+          "distance": 0.5413974523544312,
+          "excerpt_sha256": "975931d557901c2c7b62424c2e69c6db956ab7324b70e1f3385f9d2f047ab76a",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11551849",
+            "date_received": "2025-01-15",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "TX",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11596364",
+          "distance": 0.5427379608154297,
+          "excerpt_sha256": "35ff62fc620a432334c36e4001fdc99ae59f74dbb41a676e0e616a1cc2dbc802",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11596364",
+            "date_received": "2025-01-20",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "FL",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11519383",
+          "distance": 0.542936384677887,
+          "excerpt_sha256": "defb7fb693e3bd8463fba192e0e9345e57ba6eb620982f61684357b7d453c5fb",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11519383",
+            "date_received": "2025-01-15",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "NY",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11517406",
+          "distance": 0.5432906150817871,
+          "excerpt_sha256": "be2ee4b08dd4cae451a266daecdc8735b84c81b988e888f19470294bf782f46b",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11517406",
+            "date_received": "2025-01-15",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "TX",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": "Zelle",
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": null,
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": null
+  },
+  "q07": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "69b0a00349f64b98ada12df50f36def674c1bbabb558f9fae70fdbfe91df9183",
+    "limitations": [],
+    "mode": "combined",
+    "provenance": {
+      "gold_database": "/Users/sabari/Work/sudo-sapient/projects/taha/meridian-complaint-intelligence/gold/.generations/e81adbc6911540249a5404f84c0488f7/metrics.duckdb",
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "Which company had the biggest spike in complaints in Q3 2025 compared to the previous quarter, and what was driving it?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "16383198",
+          "distance": 1.1141562461853027,
+          "excerpt_sha256": "5806341fe2468de84336a4bfaf32a59fd7295a12f37a2056edcaaafa13980d80",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "16383198",
+            "date_received": "2025-10-06",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "NY",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11518338",
+          "distance": 1.115769386291504,
+          "excerpt_sha256": "d0ae2629e41fed65bf9e0bb29f58ec712ea6716173fb87bcf35b4fb7825c3e40",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11518338",
+            "date_received": "2025-01-15",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "CA",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11580981",
+          "distance": 1.1163403987884521,
+          "excerpt_sha256": "c7881821637a1ac3b7eb3a87c7f3a18ef24b1fd61242ab25b98dcbcf466df790",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11580981",
+            "date_received": "2025-01-16",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "IL",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11672364",
+          "distance": 1.1165361404418945,
+          "excerpt_sha256": "0e5c797f140822f007a878db40db51f5b38794de3a743e9af61e910330a6db83",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11672364",
+            "date_received": "2025-01-17",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "TX",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "12260782",
+          "distance": 1.1175472736358643,
+          "excerpt_sha256": "91a600fa42ddb65108e3d04ac410ba29222be33d3fb59a7bc69da5cced85ff85",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "12260782",
+            "date_received": "2025-02-27",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "TN",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "12212756",
+          "distance": 1.1177802085876465,
+          "excerpt_sha256": "8845fa6fd9a8909fb29a1d622ba29f62cc53726f59bb16745536185af6fd2538",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "12212756",
+            "date_received": "2025-02-25",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "LA",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11519116",
+          "distance": 1.1180013418197632,
+          "excerpt_sha256": "03966f55c4eabc91a0741edb33da3e75e92357d0a582689e090b6a62d992f88b",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11519116",
+            "date_received": "2025-01-15",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "NV",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "12034916",
+          "distance": 1.1181364059448242,
+          "excerpt_sha256": "8fc776402ce42bf26ad5c897cfa7bd2c201303603e702b9a49fc4cce189b9e89",
+          "metadata": {
+            "brand_name": "Zelle",
+            "company": "Early Warning Services, LLC",
+            "company_key": "early warning services llc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "12034916",
+            "date_received": "2025-02-12",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "VA",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": null,
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": null,
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": {
+      "executed_sql": "WITH filtered AS (SELECT * FROM \"company_month_metrics\" WHERE ((\"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01') OR (\"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'))) SELECT \"company\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'), 0) AS \"comparison_complaints\", \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_increase\" FROM filtered GROUP BY \"company\" ORDER BY \"absolute_increase\" DESC, \"company\" ASC LIMIT 1",
+      "parameters": [
+        "2025-04-01",
+        "2025-07-01",
+        "2025-07-01",
+        "2025-10-01",
+        "2025-04-01",
+        "2025-07-01",
+        "2025-07-01",
+        "2025-10-01"
+      ],
+      "rows": [
+        {
+          "absolute_increase": 406,
+          "baseline_complaints": 986,
+          "company": "CBC Companies, Inc.",
+          "comparison_complaints": 1392
+        }
+      ],
+      "source_database": "/Users/sabari/Work/sudo-sapient/projects/taha/meridian-complaint-intelligence/gold/.generations/e81adbc6911540249a5404f84c0488f7/metrics.duckdb"
+    }
+  },
+  "q08": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "MOHELA",
+      "input_value": "MOHELA",
+      "legal_company": "MOHELA",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "aeefa9469f56115542a1c0d123fd73042e7ef21b42571211ba92f176abd6ade5",
+    "limitations": [],
+    "mode": "narrative",
+    "provenance": {
+      "gold_database": null,
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "What are borrowers' biggest frustrations with MOHELA, based on what they write in their complaints?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "12527629",
+          "distance": 0.5503091812133789,
+          "excerpt_sha256": "a7c6625630ced3d462c58ea3dd635980c48aef1d471b4aed2c92eaddb992253a",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Closed with explanation",
+            "complaint_id": "12527629",
+            "date_received": "2025-03-17",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "CA",
+            "sub_issue": "Problem with customer service",
+            "sub_product": "Private student loan",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "14528126",
+          "distance": 0.602002739906311,
+          "excerpt_sha256": "213244e687813c5b570d0c0f8f8ebfdbc0203e2e9e07f5c2a048d728b13442ef",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Untimely response",
+            "complaint_id": "14528126",
+            "date_received": "2025-07-08",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "IL",
+            "sub_issue": "Trouble with how payments are being handled",
+            "sub_product": "Federal student loan servicing",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11045511",
+          "distance": 0.6082249879837036,
+          "excerpt_sha256": "d7aacedafbd18a0b9c9842405a3a45ea961b91e500952008712d58726426a0c0",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11045511",
+            "date_received": "2024-12-04",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "NV",
+            "sub_issue": "Problem with customer service",
+            "sub_product": "Federal student loan servicing",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9928146",
+          "distance": 0.6153384447097778,
+          "excerpt_sha256": "e46e5aa62433788de0b93bdd77fa2b9a1821eedc0c54502512986ec63019dc9b",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Closed with explanation",
+            "complaint_id": "9928146",
+            "date_received": "2024-08-26",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "FL",
+            "sub_issue": "Problem with customer service",
+            "sub_product": "Federal student loan servicing",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11066491",
+          "distance": 0.6199737787246704,
+          "excerpt_sha256": "1b72d6cce7abcea4cef387261e27d3c3a075f6e4d233c17b91b443ffab1b34e5",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11066491",
+            "date_received": "2024-12-07",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "OH",
+            "sub_issue": "Problem with customer service",
+            "sub_product": "Private student loan",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8306359",
+          "distance": 0.6205050945281982,
+          "excerpt_sha256": "e68c894e4260f0df28958829ffac5bab467d839dcfa4f57cbec7fcc4c8bad4ee",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Closed with explanation",
+            "complaint_id": "8306359",
+            "date_received": "2024-02-08",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "OH",
+            "sub_issue": "Received bad information about your loan",
+            "sub_product": "Federal student loan servicing",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8914260",
+          "distance": 0.6206989288330078,
+          "excerpt_sha256": "0bae932f1b6d91bf83dd690b1982b0eeb188d1cab657d525200fc47b40bad2ae",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Closed with explanation",
+            "complaint_id": "8914260",
+            "date_received": "2024-05-02",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "TN",
+            "sub_issue": "Trouble with how payments are being handled",
+            "sub_product": "Federal student loan servicing",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "10707812",
+          "distance": 0.622928261756897,
+          "excerpt_sha256": "31a550a31acf20056ec711b8c755ee6c5e83bfd93b33f38c449e1733fec5954f",
+          "metadata": {
+            "brand_name": "MOHELA",
+            "company": "MOHELA",
+            "company_key": "mohela",
+            "company_response": "Closed with explanation",
+            "complaint_id": "10707812",
+            "date_received": "2024-11-07",
+            "issue": "Dealing with your lender or servicer",
+            "narrative_truncated": "false",
+            "product": "Student loan",
+            "state": "PA",
+            "sub_issue": "Problem with customer service",
+            "sub_product": "Federal student loan servicing",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": "MOHELA",
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": null,
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": null
+  },
+  "q09": null,
+  "q10": null,
+  "q11": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "Cash App",
+      "input_value": "Cash App",
+      "legal_company": "Block, Inc.",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "a9894c8eeb16a938f21a965e97537024123a90e5eafe3bc11918712ef2b4a040",
+    "limitations": [],
+    "mode": "combined",
+    "provenance": {
+      "gold_database": "/Users/sabari/Work/sudo-sapient/projects/taha/meridian-complaint-intelligence/gold/.generations/e81adbc6911540249a5404f84c0488f7/metrics.duckdb",
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "When people complain about Cash App, how often does the company resolve it with actual relief versus just an explanation \u2014 and what do consumers describe in the cases that got no relief?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "17037140",
+          "distance": 0.701702356338501,
+          "excerpt_sha256": "3ae288f1b217a013185df8dbe9178cd6e4c578ce819a2f6a0b7d5d4185ce40f7",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "17037140",
+            "date_received": "2025-11-05",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "TX",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "18746199",
+          "distance": 0.7022116184234619,
+          "excerpt_sha256": "37e62cb4ab6bf12cad6330154f11c906415bb16efc6b54ad16c0f15a387d567d",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "18746199",
+            "date_received": "2025-11-21",
+            "issue": "Unauthorized transactions or other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "GA",
+            "sub_issue": "",
+            "sub_product": "Mobile or digital wallet",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "17829176",
+          "distance": 0.7170678377151489,
+          "excerpt_sha256": "ddc4010da66d316c8cc90acf7c76be7c57703357b66650ca9dc67f6c1d339623",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "17829176",
+            "date_received": "2025-12-04",
+            "issue": "Overdraft, savings, or rewards features",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "TX",
+            "sub_issue": "",
+            "sub_product": "Mobile or digital wallet",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11960699",
+          "distance": 0.7181675434112549,
+          "excerpt_sha256": "2b3e4e274e0edb65420d3dc8357ec7515b31310f70027883542ef3535e874571",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11960699",
+            "date_received": "2025-02-06",
+            "issue": "Confusing or missing disclosures",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "MD",
+            "sub_issue": "",
+            "sub_product": "Virtual currency",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "17658840",
+          "distance": 0.7193670272827148,
+          "excerpt_sha256": "dc0cea0b28afe2c986a51c84575a7dc3cf3e65b46149a4b8a7776cdf64df908c",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "17658840",
+            "date_received": "2025-12-02",
+            "issue": "Unauthorized transactions or other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "TX",
+            "sub_issue": "",
+            "sub_product": "Mobile or digital wallet",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "12148630",
+          "distance": 0.7316391468048096,
+          "excerpt_sha256": "6f749148b23f6d0e3987f9fe3a394e31e985ba36192980dfc1309260c73ce05b",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "12148630",
+            "date_received": "2025-02-20",
+            "issue": "Other service problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "PA",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11677601",
+          "distance": 0.7367096543312073,
+          "excerpt_sha256": "a79d013617441977cba866aad34e6c01b54b242864d9c0cb8c0de98e928bf7c4",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11677601",
+            "date_received": "2025-01-16",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "VA",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11669140",
+          "distance": 0.7411599159240723,
+          "excerpt_sha256": "51561e7f19df23564270980de41378c5f02837cfbe4cee600f9ac5f57683fb17",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11669140",
+            "date_received": "2025-01-17",
+            "issue": "Other transaction problem",
+            "narrative_truncated": "false",
+            "product": "Money transfer, virtual currency, or money service",
+            "state": "CO",
+            "sub_issue": "",
+            "sub_product": "Domestic (US) money transfer",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": "Cash App",
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": null,
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": {
+      "executed_sql": "SELECT \"company_response_to_consumer\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_response_month_metrics\" WHERE \"company\" = 'Block, Inc.' GROUP BY \"company_response_to_consumer\" ORDER BY sum(\"complaint_count\") DESC, \"company_response_to_consumer\" ASC LIMIT 10",
+      "parameters": [
+        "Block, Inc."
+      ],
+      "rows": [
+        {
+          "company_response_to_consumer": "Closed with explanation",
+          "complaint_count": 40230
+        },
+        {
+          "company_response_to_consumer": "Closed with monetary relief",
+          "complaint_count": 42
+        }
+      ],
+      "source_database": "/Users/sabari/Work/sudo-sapient/projects/taha/meridian-complaint-intelligence/gold/.generations/e81adbc6911540249a5404f84c0488f7/metrics.duckdb"
+    }
+  },
+  "q12": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "33adeb88ac64620ce1ec47ed64701b3551530a910ad45a4555f72798c5738036",
+    "limitations": [],
+    "mode": "narrative",
+    "provenance": {
+      "gold_database": null,
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "How do people describe the impact on their lives when their bank suddenly freezes or closes their account?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "10584982",
+          "distance": 0.8422200679779053,
+          "excerpt_sha256": "a9bc4d05724b224b88588b7914a5c89712561f7ac5388e9f4dfe4253527a9d76",
+          "metadata": {
+            "brand_name": "",
+            "company": "U.S. BANCORP",
+            "company_key": "u s bancorp",
+            "company_response": "Closed with explanation",
+            "complaint_id": "10584982",
+            "date_received": "2024-10-25",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "OH",
+            "sub_issue": "Deposits and withdrawals",
+            "sub_product": "Checking account",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11567359",
+          "distance": 0.8524190187454224,
+          "excerpt_sha256": "7bcae53c698340c4ec68cde3ce50bd0cb6d971d1501fcea86e4b593b4ae2ad8f",
+          "metadata": {
+            "brand_name": "",
+            "company": "SOFI TECHNOLOGIES, INC.",
+            "company_key": "sofi technologies inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11567359",
+            "date_received": "2025-01-16",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "MO",
+            "sub_issue": "Deposits and withdrawals",
+            "sub_product": "Checking account",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "17883000",
+          "distance": 0.8849085569381714,
+          "excerpt_sha256": "7cc85400e31e31af4812dfd22ff73b839c706f3ea8f986b7867f8e1d0ff9b205",
+          "metadata": {
+            "brand_name": "",
+            "company": "FIRST CITIZENS BANCSHARES, INC.",
+            "company_key": "first citizens bancshares inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "17883000",
+            "date_received": "2025-12-09",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "FL",
+            "sub_issue": "Deposits and withdrawals",
+            "sub_product": "Savings account",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11760479",
+          "distance": 0.88837730884552,
+          "excerpt_sha256": "2bfab2f64fd173f6c29ddfcddecfbc392cb2617a459d2bf920ff78580f474f18",
+          "metadata": {
+            "brand_name": "Cash App",
+            "company": "Block, Inc.",
+            "company_key": "block inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "11760479",
+            "date_received": "2025-01-25",
+            "issue": "Closing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "IL",
+            "sub_issue": "Funds not received from closed account",
+            "sub_product": "Other banking product or service",
+            "timely_response": "false"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8551192",
+          "distance": 0.9142165184020996,
+          "excerpt_sha256": "0f5eecb2ba851a580fc35fe29db50237bbd94c93d09f8bcd7b7b7348c029fd0f",
+          "metadata": {
+            "brand_name": "",
+            "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
+            "company_key": "bank of america national association",
+            "company_response": "Closed with monetary relief",
+            "complaint_id": "8551192",
+            "date_received": "2024-03-14",
+            "issue": "Closing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "OK",
+            "sub_issue": "Company closed your account",
+            "sub_product": "Checking account",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "10174549",
+          "distance": 0.9159783124923706,
+          "excerpt_sha256": "c24a4b74f05e71a93a4c93d5d510c028f89e191577c104bf533ad3ac8193b33f",
+          "metadata": {
+            "brand_name": "",
+            "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
+            "company_key": "bank of america national association",
+            "company_response": "Closed with explanation",
+            "complaint_id": "10174549",
+            "date_received": "2024-09-18",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "CA",
+            "sub_issue": "Deposits and withdrawals",
+            "sub_product": "Checking account",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9029320",
+          "distance": 0.9198361039161682,
+          "excerpt_sha256": "4911719fb8b924efb576b80b5c83e5f721fa240eefa297261d22867751cfcc02",
+          "metadata": {
+            "brand_name": "",
+            "company": "FinCo Services Inc DBA Current",
+            "company_key": "finco services inc dba current",
+            "company_response": "Closed with explanation",
+            "complaint_id": "9029320",
+            "date_received": "2024-05-16",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "TX",
+            "sub_issue": "Deposits and withdrawals",
+            "sub_product": "Checking account",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "8875253",
+          "distance": 0.9208900928497314,
+          "excerpt_sha256": "5dcd61706c7d2fab857f5073d0c48b04cbbe2db8d1d27b247ae9b61773d05fcf",
+          "metadata": {
+            "brand_name": "",
+            "company": "BMO BANK NATIONAL ASSOCIATION",
+            "company_key": "bmo bank national association",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "8875253",
+            "date_received": "2024-04-27",
+            "issue": "Managing an account",
+            "narrative_truncated": "false",
+            "product": "Checking or savings account",
+            "state": "NV",
+            "sub_issue": "Deposits and withdrawals",
+            "sub_product": "Checking account",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": null,
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": null,
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": null
+  },
+  "q13": {
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "TransUnion",
+      "input_value": "TransUnion",
+      "legal_company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "309a6739874998557f3b709edfe3e31601d2e78e83923d20ea74e4f7b69a24a9",
+    "limitations": [],
+    "mode": "narrative",
+    "provenance": {
+      "gold_database": null,
+      "gold_manifest_sha256": "efa1d6daacdef07cca7e03e7cece55b2df34ed952defe64dae431772cde3d214",
+      "rag_generation": "f747da5e5f654652a41d26037a67c9f9",
+      "rag_manifest_sha256": "07d54b81e17b71670791d21a8263268ffddc4f5b02e7aacc216afdf959b24975"
+    },
+    "question": "How is TransUnion handling identity-theft disputes, according to the people filing complaints?",
+    "retrieval": {
+      "evidence": [
+        {
+          "complaint_id": "11611196",
+          "distance": 0.5587863326072693,
+          "excerpt_sha256": "43783eedb435af66ee2121b96abe918bf8b4b66dc372e6452a7424e4969c6c98",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "11611196",
+            "date_received": "2025-01-20",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "IL",
+            "sub_issue": "Difficulty submitting a dispute or getting information about a dispute over the phone",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "14214408",
+          "distance": 0.5784866213798523,
+          "excerpt_sha256": "4d994fffab2137e5307b803c926abea64ec93e7b5bbd413960324c2a4cd1fe26",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "14214408",
+            "date_received": "2025-06-23",
+            "issue": "Incorrect information on your report",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "NY",
+            "sub_issue": "Information belongs to someone else",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "15925425",
+          "distance": 0.5855942964553833,
+          "excerpt_sha256": "34c556cfa75598bb25ca8f113981014badd956ff0fcc2a48cc18ab36b40e66a3",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "15925425",
+            "date_received": "2025-09-15",
+            "issue": "Incorrect information on your report",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "CA",
+            "sub_issue": "Information belongs to someone else",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9219096",
+          "distance": 0.6019684076309204,
+          "excerpt_sha256": "9ee7ac44a8106b8a041375802bc32edfadf2513a7a38198de51dbc432ecdd366",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with explanation",
+            "complaint_id": "9219096",
+            "date_received": "2024-06-10",
+            "issue": "Incorrect information on your report",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "CA",
+            "sub_issue": "Information belongs to someone else",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9548947",
+          "distance": 0.6045752763748169,
+          "excerpt_sha256": "7d92d9e994c9de9cbfbd03fc008266a59433b4bcd4ac44b24e55d6cf1d33a996",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "9548947",
+            "date_received": "2024-07-18",
+            "issue": "Incorrect information on your report",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "IL",
+            "sub_issue": "Information belongs to someone else",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "13009428",
+          "distance": 0.6074280738830566,
+          "excerpt_sha256": "d80ce5d808c207a2cd587557ea8b431cfe86785ad5653319e75cad285af6eb7c",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "13009428",
+            "date_received": "2025-04-15",
+            "issue": "Incorrect information on your report",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "CA",
+            "sub_issue": "Information belongs to someone else",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "9787216",
+          "distance": 0.6121578812599182,
+          "excerpt_sha256": "1be9753f7c53c4e6d6df053095dcad05b0f2227b3542bdf605230bf7d4223606",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "9787216",
+            "date_received": "2024-08-13",
+            "issue": "Problem with a company's investigation into an existing problem",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "TN",
+            "sub_issue": "Difficulty submitting a dispute or getting information about a dispute over the phone",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        },
+        {
+          "complaint_id": "11481504",
+          "distance": 0.6220529079437256,
+          "excerpt_sha256": "d1e9ccb4a15bba1a081733280541bd146beeb93183d5b909d034bd891d17cbaf",
+          "metadata": {
+            "brand_name": "TransUnion",
+            "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+            "company_key": "transunion intermediate holdings inc",
+            "company_response": "Closed with non-monetary relief",
+            "complaint_id": "11481504",
+            "date_received": "2025-01-11",
+            "issue": "Incorrect information on your report",
+            "narrative_truncated": "false",
+            "product": "Credit reporting or other personal consumer reports",
+            "state": "NC",
+            "sub_issue": "Information belongs to someone else",
+            "sub_product": "Credit reporting",
+            "timely_response": "true"
+          },
+          "truncated": false
+        }
+      ],
+      "filters": {
+        "brand_name": "TransUnion",
+        "company": null,
+        "company_response": null,
+        "end": null,
+        "issue": null,
+        "product": null,
+        "start": null,
+        "state": null,
+        "sub_issue": null,
+        "sub_product": null,
+        "timely_response": null
+      },
+      "status": "ok"
+    },
+    "structured": null
+  },
+  "q14": null,
+  "q15": null
+}

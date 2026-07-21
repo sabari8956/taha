@@ -1,0 +1,27 @@
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Python caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Generated reports and transient agent artifacts
+.pi-subagents/
+
+# Database files are intentionally tracked in this repository.
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

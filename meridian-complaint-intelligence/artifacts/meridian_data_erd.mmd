@@ -1,0 +1,96 @@
+erDiagram
+    BRONZE_MANIFEST {
+        string manifest_id PK
+        string source_url
+        string retrieval_method
+        datetime retrieved_at
+        date date_filter_start
+        date date_filter_end
+        string narrative_filter
+        int record_count
+        string file_checksum
+        string schema_version
+    }
+
+    BRONZE_COMPLAINTS_RAW {
+        string complaint_id PK
+        string date_received
+        string date_sent_to_company
+        string product
+        string sub_product
+        string issue
+        string sub_issue
+        string consumer_complaint_narrative
+        string company_public_response
+        string company
+        string state
+        string zip_code
+        string tags
+        string submitted_via
+        string company_response_to_consumer
+        string timely_response
+    }
+
+    SILVER_COMPANY_ALIASES {
+        string alias_id PK
+        string brand_name
+        string legal_company_name
+        string match_type
+    }
+
+    SILVER_COMPLAINTS {
+        string complaint_id PK
+        date date_received
+        date date_sent_to_company
+        string product
+        string sub_product
+        string issue
+        string sub_issue
+        string consumer_complaint_narrative
+        boolean has_narrative
+        string company_raw
+        string company_normalized FK
+        string state
+        string zip_code
+        string tags
+        string submitted_via
+        string company_response_to_consumer
+        boolean timely_response_flag
+    }
+
+    GOLD_COMPANY_PRODUCT_MONTH_METRICS {
+        string metric_id PK
+        string company_normalized FK
+        string product
+        date month
+        int complaint_count
+        int timely_count
+        float timely_response_rate
+    }
+
+    GOLD_NARRATIVE_RETRIEVAL_INDEX {
+        string complaint_id PK, FK
+        string company_normalized
+        string product
+        string state
+        date date_received
+        string lexical_tokens
+        string embedding_ref
+    }
+
+    GOLD_ANSWER_LOG {
+        string question_id PK
+        string question
+        string answer
+        string executed_query
+        boolean abstained
+        string citations
+    }
+
+    BRONZE_MANIFEST ||--|| BRONZE_COMPLAINTS_RAW : "describes snapshot of"
+    BRONZE_COMPLAINTS_RAW ||--o| SILVER_COMPLAINTS : "canonicalized into"
+    SILVER_COMPANY_ALIASES ||--o{ SILVER_COMPLAINTS : "normalizes company for"
+    SILVER_COMPLAINTS ||--o{ GOLD_COMPANY_PRODUCT_MONTH_METRICS : "aggregated into"
+    SILVER_COMPLAINTS ||--o| GOLD_NARRATIVE_RETRIEVAL_INDEX : "indexed into"
+    GOLD_COMPANY_PRODUCT_MONTH_METRICS ||--o{ GOLD_ANSWER_LOG : "supports"
+    GOLD_NARRATIVE_RETRIEVAL_INDEX ||--o{ GOLD_ANSWER_LOG : "cited in"

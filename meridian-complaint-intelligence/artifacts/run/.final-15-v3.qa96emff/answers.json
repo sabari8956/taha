@@ -1,0 +1,155 @@
+[
+  {
+    "abstained": false,
+    "answer": "Debt is not yours: 43208 complaints (25.2776% of 170934). Debt was result of identity theft: 23872 complaints (13.9656% of 170934). Notification didn't disclose it was an attempt to collect a debt: 22989 complaints (13.4491% of 170934). Attempted to collect wrong amount: 18252 complaints (10.6778% of 170934). Didn't receive enough information to verify debt: 12725 complaints (7.4444% of 170934). Complaint 8933644 reported: \u201cI am facing financial harassment and severe damage to my credit due to actions by the XXXX XXXX XXXX XXXX XXXX XXXX, located at XXXX XXXX XXXX XXXX, XXXX XXXX, XXXX, UT XXXX, regarding an alleged debt from XX/XX/XXXX.\u201d Complaint 10674178 reported: \u201cDate : XX/XX/year> XXXX True Accord XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX Re : Intent to File a Complaint with the XXXX Dear Sir or Madam, I am writing to formally notify you of my intent to file a complaint\u201d Complaint 15461934 reported: \u201cI asked for debt validation from the company.\u201d Limitations: At least one cited narrative was truncated by the index excerpt limit.",
+    "citations": [
+      8933644,
+      10674178,
+      15461934
+    ],
+    "query": "WITH counts AS (SELECT \"sub_issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"product_issue_sub_issue_month_metrics\" WHERE \"product\" = 'Debt collection' GROUP BY \"sub_issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "question_id": "q01"
+  },
+  {
+    "abstained": false,
+    "answer": "Other transaction problem: 27856 complaints (73.1052% of 38104). Fraud or scam: 1913 complaints (5.0205% of 38104). Unauthorized transactions or other transaction problem: 1772 complaints (4.6504% of 38104). Managing an account: 1399 complaints (3.6715% of 38104). Other service problem: 823 complaints (2.1599% of 38104). Complaint 17037140 reported: \u201cI am writing to formally express my concerns regarding CashApp handling disputes, particularly in light of the recent CFPB lawsuit highlighting significant issues with the platform.\u201d Complaint 11809016 reported: \u201cI have used cashapp for years. When I first opened the account. I would have friends and family send me money and the funds were never available. I would call and there was no one to answer. I once called and had to give my information over the phone to someone.\u201d Complaint 14282974 reported: \u201cCashApp fees taken, violation of privacy, funds not adequately available XX/XX/year> and ongoing.\u201d",
+    "citations": [
+      17037140,
+      11809016,
+      14282974
+    ],
+    "query": "WITH counts AS (SELECT \"issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_issue_month_metrics\" WHERE \"company\" = 'Block, Inc.' AND \"complaint_month\" >= DATE '2025-01-01' AND \"complaint_month\" < DATE '2026-01-01' GROUP BY \"issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "question_id": "q02"
+  },
+  {
+    "abstained": false,
+    "answer": "The executed analysis returned: company=Block, Inc., complaint_count=40272, timely_response_count=39684, timely_response_known_count=40272, timely_response_rate=0.9854. Complaint 11899931 reported: \u201cTo Whom It May Concern, I am filing a formal complaint against Cash App ( Square , Inc. ) regarding an unresolved dispute for {$500.00}, which has now exceeded the 45-day dispute resolution timeframe stated in their policies.\u201d Complaint 16902242 reported: \u201cThis complaint concerns Afterpay US , Inc. and their improper handling of a transaction dispute involving the fraudulent merchant XXXX ( XXXX XXXX ).\u201d Complaint 11908244 reported: \u201cCash app setup and email address for consumers to email about the settlement only to find out it is a scripted automated reply to all the emails and sometimes you don't even get an reply back after emailing cash app. XXXX is not cash app helping it is an automated reply sent back.\u201d Interpretation: Timely-response rates exclude records whose timely-response value is unknown. The winner is the lowest timely-response rate within the ten highest-volume companies; ties are resolved by company name.",
+    "citations": [
+      11899931,
+      16902242,
+      11908244
+    ],
+    "query": "WITH company_scope AS (SELECT \"company\", sum(\"complaint_count\") AS \"complaint_count\", sum(\"timely_response_count\") AS \"timely_response_count\", sum(\"timely_response_known_count\") AS \"timely_response_known_count\" FROM \"company_month_metrics\" GROUP BY \"company\"), volume_cohort AS (SELECT *, \"timely_response_count\"::DOUBLE / nullif(\"timely_response_known_count\", 0) AS \"timely_response_rate\" FROM company_scope ORDER BY \"complaint_count\" DESC, \"company\" ASC LIMIT 10) SELECT \"company\", \"complaint_count\", \"timely_response_count\", \"timely_response_known_count\", \"timely_response_rate\" FROM volume_cohort ORDER BY \"timely_response_rate\" ASC NULLS LAST, \"company\" ASC LIMIT 1",
+    "question_id": "q03"
+  },
+  {
+    "abstained": true,
+    "answer": "The requested period begins before this snapshot's 2024-01-01 coverage.",
+    "citations": [],
+    "query": null,
+    "question_id": "q04"
+  },
+  {
+    "abstained": false,
+    "answer": "Their investigation did not fix an error on your report: 195397 complaints (63.8477% of 306036). Investigation took more than 30 days: 64633 complaints (21.1194% of 306036). Was not notified of investigation status or results: 24911 complaints (8.1399% of 306036). Problem with personal statement of dispute: 12931 complaints (4.2253% of 306036). Difficulty submitting a dispute or getting information about a dispute over the phone: 8164 complaints (2.6677% of 306036). Complaint 8204618 reported: \u201cWhen I reviewed my credit report, I discovered that some of the information was erroneous. The 3 credit bureaus must validate these items in line with Sections 609 ( a ) ( 1 ) ( A ) and 611 ( a ) ( 1 ) ( A ).\u201d Complaint 9655097 reported: \u201caccording to the fair credit reporting act 15 usc 1681 section 602a states \" there is a need to ensure that consumer reporting agencies exercise their grave responsibilities with fairness, impartiality, and a respect for the consumers right to privacy.\u201d Complaint 8718573 reported: \u201cWhen I reviewed my credit report, I discovered that some of the information was erroneous. The XXXX credit bureaus must validate these accounts in line with Sections 609 ( a ) ( 1 ) ( A ) and 611 ( a ) ( 1 ) ( A ).\u201d",
+    "citations": [
+      8204618,
+      9655097,
+      8718573
+    ],
+    "query": "WITH counts AS (SELECT \"sub_issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"product_issue_sub_issue_month_metrics\" WHERE \"product\" = 'Credit reporting or other personal consumer reports' AND \"issue\" = 'Problem with a company''s investigation into an existing problem' GROUP BY \"sub_issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "question_id": "q05"
+  },
+  {
+    "abstained": false,
+    "answer": "Among the retrieved examples, repeated issue/sub-issue labels were: Fraud or scam (5); Other transaction problem (3). Among the retrieved examples, Complaint 11644248 reported: \u201cI am writing to formally express my concerns regarding Zelle 's handling of disputes, particularly in light of the recent CFPB lawsuit highlighting significant issues with the platform.\u201d Among the retrieved examples, Complaint 11517406 reported: \u201cI am writing to formally raise my concerns about Zelles approach to handling disputes, particularly in light of the recent CFPB lawsuit that highlights serious issues with the platform.\u201d Among the retrieved examples, Complaint 11542930 reported: \u201cI am writing to formally express my concerns regarding Zelles handling of disputes, particularly in light of the recent CFPB lawsuit highlighting significant issues with the platform.\u201d Limitations: These are relevance-ranked retrieved examples, not population prevalence estimates.",
+    "citations": [
+      11644248,
+      11517406,
+      11542930
+    ],
+    "query": null,
+    "question_id": "q06"
+  },
+  {
+    "abstained": false,
+    "answer": "Complaints were up: 986 in the baseline year versus 1392 in the comparison year, a change of 406. Driver Improper use of your report: change 567 (162 to 729). Driver Incorrect information on your report: change -122 (625 to 503). Driver Problem with fraud alerts or security freezes: change -40 (163 to 123). Complaint 16383198 reported: \u201cI am writing to formally express my concerns regarding XXXX XXXX handling of disputes, particularly in light of the recent CFPB lawsuit highlighting significant issues with the platform.\u201d Complaint 11518338 reported: \u201cI am writing to formally express my concerns regarding Zelle 's handling of disputes, particularly in light of the recent CFPB lawsuit highlighting significant issues with the platform.\u201d Complaint 11580981 reported: \u201cI am writing to formally express my concerns regarding XXXX handling of disputes, particularly in light of the recent CFPB lawsuit highlighting significant issues with the platform.\u201d",
+    "citations": [
+      16383198,
+      11518338,
+      11580981
+    ],
+    "query": "WITH company_counts AS (SELECT \"company\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'), 0) AS \"comparison_complaints\" FROM \"company_month_metrics\" WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-10-01' GROUP BY \"company\"), winner AS (SELECT *, \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_change\" FROM company_counts ORDER BY \"absolute_change\" DESC, \"company\" ASC LIMIT 1), issue_counts AS (SELECT coalesce(\"issue\", 'Unknown') AS \"issue\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'), 0) AS \"comparison_complaints\" FROM \"company_product_state_issue_month_metrics\" WHERE \"company\" = (SELECT \"company\" FROM winner) AND \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-10-01' GROUP BY \"issue\"), drivers AS (SELECT 'driver' AS \"row_type\", (SELECT \"company\" FROM winner) AS \"winner_company\", \"issue\", \"baseline_complaints\", \"comparison_complaints\", \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_change\", CASE WHEN \"baseline_complaints\" = 0 THEN NULL ELSE (\"comparison_complaints\" - \"baseline_complaints\")::DOUBLE / \"baseline_complaints\" END AS \"percentage_change\" FROM issue_counts), total AS (SELECT 'total' AS \"row_type\", \"company\" AS \"winner_company\", NULL::VARCHAR AS \"issue\", \"baseline_complaints\", \"comparison_complaints\", \"absolute_change\", CASE WHEN \"baseline_complaints\" = 0 THEN NULL ELSE \"absolute_change\"::DOUBLE / \"baseline_complaints\" END AS \"percentage_change\" FROM winner) SELECT * FROM total UNION ALL SELECT * FROM (SELECT * FROM drivers ORDER BY abs(\"absolute_change\") DESC, \"issue\" ASC LIMIT 3)",
+    "question_id": "q07"
+  },
+  {
+    "abstained": false,
+    "answer": "Dealing with your lender or servicer: 5770 complaints (64.1467% of 8995). Struggling to repay your loan: 1138 complaints (12.6515% of 8995). Incorrect information on your report: 1116 complaints (12.4069% of 8995). Improper use of your report: 448 complaints (4.9805% of 8995). Problem with a company's investigation into an existing problem: 206 complaints (2.2902% of 8995). Complaint 12527629 reported: \u201cI signed up for autopay when I moved to the new platform. Yet, and shame on me for not checking, my payment was not taken out the last XXXX months. I've always been on time.\u201d Complaint 14528126 reported: \u201cThere are 2 big issues I have encountered with MOHELA in the past of late ( I had issues with late billing statements in XXXX previously ). The primary issue stems from MOHELA not processing my income driven repayment ( IDR ) recertification in a timely manner.\u201d Complaint 8306359 reported: \u201cBack in XX/XX/2023, I sent a request to transfer my loans to MOHELA and be put on the SAVE/REPAYE plan, which would involve XXXX XXXX monthly payments given my current salary. I was erroneously put on the STANDARD plan and charged {$1900.00}.\u201d",
+    "citations": [
+      12527629,
+      14528126,
+      8306359
+    ],
+    "query": "WITH counts AS (SELECT \"issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_issue_month_metrics\" WHERE \"company\" = 'MOHELA' GROUP BY \"issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "question_id": "q08"
+  },
+  {
+    "abstained": true,
+    "answer": "This CFPB snapshot does not establish coverage of auto-insurance claims.",
+    "citations": [],
+    "query": null,
+    "question_id": "q09"
+  },
+  {
+    "abstained": false,
+    "answer": "Trouble during payment process: 406 complaints (46.4531% of 874). Struggling to pay mortgage: 232 complaints (26.5446% of 874). Applying for a mortgage or refinancing an existing mortgage: 99 complaints (11.3272% of 874). Closing on a mortgage: 81 complaints (9.2677% of 874). Incorrect information on your report: 31 complaints (3.5469% of 874). Complaint 14634056 reported: \u201cI am a borrower that had XXXX related hardships I received a California mortgage relief Grant that brought my mortgage current up to XX/XX/XXXX I had email and called the sub service handling my mortgage loan care and made them aware of the mortgage relief but the sub-service sti\u201d Complaint 17191435 reported: \u201cMy home in California was destroyed in a federally declared wildfire disaster.\u201d Complaint 15209793 reported: \u201cShellpoint/New Rez is violating the rights afforded to me under the California Homeowners Bill of Rights . Specifically in these areas : Violation of Civil Code section 2923.\u201d",
+    "citations": [
+      14634056,
+      17191435,
+      15209793
+    ],
+    "query": "WITH counts AS (SELECT \"issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_product_state_issue_month_metrics\" WHERE \"product\" = 'Mortgage' AND \"state\" = 'CA' AND \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2026-01-01' GROUP BY \"issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "question_id": "q10"
+  },
+  {
+    "abstained": false,
+    "answer": "Closed with explanation: 40230 (99.8957% of 40272). Closed with monetary relief: 42 (0.1043% of 40272). Complaint 17037140 reported: \u201cI am writing to formally express my concerns regarding CashApp handling disputes, particularly in light of the recent CFPB lawsuit highlighting significant issues with the platform.\u201d Complaint 18746199 reported: \u201cOn XX/XX/year>, a {$260.00} P2P payment was mistakenly sent via Cash App to the wrong individual.\u201d Complaint 17829176 reported: \u201cI have tried to deal with CashApp support in various means, and they refuse to actually do any of their jobs. Their new CashApp XXXX XXXX is flawed and is making it difficult to access the benefits that I had already earned and it keeps restricting me despite it saying I qualify.\u201d Interpretation: Closed with monetary relief and Closed with non-monetary relief are CFPB relief categories; Closed with explanation is only a no-relief proxy, not proof of the consumer's actual outcome or dollar recovery.",
+    "citations": [
+      17037140,
+      18746199,
+      17829176
+    ],
+    "query": "WITH category_counts AS (SELECT \"company_response_to_consumer\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_response_month_metrics\" WHERE \"company\" = 'Block, Inc.' GROUP BY \"company_response_to_consumer\"), totals AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM category_counts) SELECT \"company_response_to_consumer\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM category_counts CROSS JOIN totals ORDER BY \"complaint_count\" DESC, \"company_response_to_consumer\" ASC",
+    "question_id": "q11"
+  },
+  {
+    "abstained": false,
+    "answer": "Among the retrieved examples, repeated issue/sub-issue labels were: Managing an account / Deposits and withdrawals (4). Among the retrieved examples, Complaint 10584982 reported: \u201cOn XXXX I received a provisional credit of {$130.\u201d Among the retrieved examples, Complaint 11760479 reported: \u201cAmount frozen : {$6500.00} Squareup XXXX Close My Account Funds have been frozen for more than XXXX days and the fund status is still pending.\u201d Among the retrieved examples, Complaint 8551192 reported: \u201cOn XX/XX/2024, Bank of America unexpectedly denied me access to my personal checking account and informed me that it had been closed. Unfortunately, they could not provide a specific date for the closure.\u201d Limitations: These are relevance-ranked retrieved examples, not population prevalence estimates.",
+    "citations": [
+      10584982,
+      11760479,
+      8551192
+    ],
+    "query": null,
+    "question_id": "q12"
+  },
+  {
+    "abstained": false,
+    "answer": "Among the retrieved examples, repeated issue/sub-issue labels were: Incorrect information on your report / Information belongs to someone else (3). Among the retrieved examples, Complaint 11611196 reported: \u201cI am a victim of identity theft, and fraudulent accounts remain on my TransUnion credit report despite my original dispute submission on XX/XX/XXXX, and a follow-up submission on XX/XX/XXXX.\u201d Among the retrieved examples, Complaint 14214408 reported: \u201cI am a victim of identity theft, and TransUnion has failed to comp ly with FCRA 605B.\u201d Among the retrieved examples, Complaint 8469214 reported: \u201cI filed a dispute for incorrect information on my credit report. I received an email from the credit bureau stating that they are assuming the disputes are coming from a 3rd party. They in fact did not come from a 3rd party.\u201d Limitations: These are relevance-ranked retrieved examples, not population prevalence estimates.",
+    "citations": [
+      11611196,
+      14214408,
+      8469214
+    ],
+    "query": null,
+    "question_id": "q13"
+  },
+  {
+    "abstained": false,
+    "answer": "Complaints were up: 29484 in the baseline year versus 51453 in the comparison year, a change of 21969. Driver Managing an account: change 10096 (16409 to 26505). Driver Problem caused by your funds being low: change 7151 (2187 to 9338). Driver Problem with a lender or other company charging your account: change 2205 (3765 to 5970). Complaint 12295127 reported: \u201cIn XXXX, the interest rate changed, it went down. I received emails pertaining to changes in my credit score ( unsolicited ) and notices that my email was compromised ( dark web ) and no notice whatsoever that the savings rate has changed.\u201d Complaint 10821142 reported: \u201cXXXX CHECK RECEIVED ( Cash ) + {$450.00} XXXX CHECK RECEIVED ( Cash ) + {$450.00} XXXX CHECK RECEIVED ( Cash ) + {$110.00} Notice showing me cash available to me : Available to withdraw current : {$0.00} gains/losses : The remaining {$1000.\u201d Complaint 9325375 reported: \u201c5 days ago, I received a letter from a travel agency in XXXX DE ( see attachment ) that informed me that the {$20.00} check that I had sent them on XX/XX/year>, was denied for insufficient funds.\u201d",
+    "citations": [
+      12295127,
+      10821142,
+      9325375
+    ],
+    "query": "WITH issue_counts AS (SELECT coalesce(\"issue\", 'Unknown') AS \"issue\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2024-01-01' AND \"complaint_month\" < DATE '2025-01-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-01-01' AND \"complaint_month\" < DATE '2026-01-01'), 0) AS \"comparison_complaints\" FROM \"company_product_state_issue_month_metrics\" WHERE \"product\" = 'Checking or savings account' AND \"complaint_month\" >= DATE '2024-01-01' AND \"complaint_month\" < DATE '2026-01-01' GROUP BY \"issue\"), drivers AS (SELECT 'driver' AS \"row_type\", \"issue\", \"baseline_complaints\", \"comparison_complaints\", \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_change\", CASE WHEN \"baseline_complaints\" = 0 THEN NULL ELSE (\"comparison_complaints\" - \"baseline_complaints\")::DOUBLE / \"baseline_complaints\" END AS \"percentage_change\" FROM issue_counts), total AS (SELECT 'total' AS \"row_type\", NULL::VARCHAR AS \"issue\", sum(\"baseline_complaints\") AS \"baseline_complaints\", sum(\"comparison_complaints\") AS \"comparison_complaints\", sum(\"absolute_change\") AS \"absolute_change\", CASE WHEN sum(\"baseline_complaints\") = 0 THEN NULL ELSE sum(\"absolute_change\")::DOUBLE / sum(\"baseline_complaints\") END AS \"percentage_change\" FROM drivers) SELECT * FROM total UNION ALL SELECT * FROM (SELECT * FROM drivers ORDER BY abs(\"absolute_change\") DESC, \"issue\" ASC LIMIT 3)",
+    "question_id": "q14"
+  },
+  {
+    "abstained": true,
+    "answer": "The CFPB response category does not contain a verified dollar amount of relief paid.",
+    "citations": [],
+    "query": null,
+    "question_id": "q15"
+  }
+]

@@ -1,0 +1,706 @@
+{
+  "q01": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "24927b0c5b451070386919b951e0809506cc21c57dae08d7cef0b53f5fa19ffd",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": "Debt collection",
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "8933644",
+        "10674178",
+        "15461934",
+        "8599417",
+        "9913884",
+        "12250531",
+        "8857296",
+        "15990443"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "cc71406529cafc327699395a36949c51e9ad66bad1038687aca35ad6c4d8cc82",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q02": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": null,
+      "snapshot_start": null
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "Expected operand value to be an int or a float for operator $gte, got 2025-01-01 in query."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "configuration_error"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  },
+  "q03": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "0a698e83c4a2aebb4c01b9d4eb354e95a7b6493a2fe933176959c9097cedc90e",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": "Block, Inc.",
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": false
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": "WITH company_scope AS (SELECT \"company\", sum(\"complaint_count\") AS \"complaint_count\", sum(\"timely_response_count\") AS \"timely_response_count\", sum(\"timely_response_known_count\") AS \"timely_response_known_count\" FROM \"company_month_metrics\" GROUP BY \"company\"), volume_cohort AS (SELECT *, \"timely_response_count\"::DOUBLE / nullif(\"timely_response_known_count\", 0) AS \"timely_response_rate\" FROM company_scope ORDER BY \"complaint_count\" DESC, \"company\" ASC LIMIT 10) SELECT \"company\", \"complaint_count\", \"timely_response_count\", \"timely_response_known_count\", \"timely_response_rate\" FROM volume_cohort ORDER BY \"timely_response_rate\" ASC NULLS LAST, \"company\" ASC LIMIT 1",
+    "structured_row_count": 1,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "11899931",
+        "16902242",
+        "11908244",
+        "14198801",
+        "11937726",
+        "13065482",
+        "14443725",
+        "14120881"
+      ],
+      "claim_count": 9,
+      "reasons": [],
+      "template_hash": "6c081bdaca2b923c693ebc1fbeee836317ea51ccfc2e38b9f6c57108d0dfe59e",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q04": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": false,
+      "reason": "The requested period begins before this snapshot's 2024-01-01 coverage.",
+      "required_capability": "date_range",
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "The requested period begins before this snapshot's 2024-01-01 coverage."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "coverage_check"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  },
+  "q05": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "8f861847b54057547ae09f87982223bb34d2a3fa0794e4ffd45c08cfc8fe99a7",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": "Credit reporting or other personal consumer reports",
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "8204618",
+        "9655097",
+        "8718573",
+        "10113251",
+        "8450211",
+        "12269263",
+        "14143254",
+        "9288608"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "cc71406529cafc327699395a36949c51e9ad66bad1038687aca35ad6c4d8cc82",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q06": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "Zelle",
+      "input_value": "Zelle",
+      "legal_company": "Early Warning Services, LLC",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "837aa554c3c9da60c03303f82ba9ec877ca151fa664a2a120c15feade313e113",
+    "executed_narrative_filters": {
+      "brand_name": "Zelle",
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "Early Warning Services, LLC",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "11644248",
+        "12184920",
+        "11542008",
+        "11664680",
+        "11551849",
+        "11596364",
+        "11519383",
+        "11517406"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "cc71406529cafc327699395a36949c51e9ad66bad1038687aca35ad6c4d8cc82",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q07": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "69b0a00349f64b98ada12df50f36def674c1bbabb558f9fae70fdbfe91df9183",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "2025-04-01",
+      "2025-07-01",
+      "2025-07-01",
+      "2025-10-01",
+      "2025-04-01",
+      "2025-07-01",
+      "2025-07-01",
+      "2025-10-01"
+    ],
+    "structured_query": "WITH filtered AS (SELECT * FROM \"company_month_metrics\" WHERE ((\"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01') OR (\"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'))) SELECT \"company\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'), 0) AS \"comparison_complaints\", \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_increase\" FROM filtered GROUP BY \"company\" ORDER BY \"absolute_increase\" DESC, \"company\" ASC LIMIT 1",
+    "structured_row_count": 1,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "16383198",
+        "11518338",
+        "11580981",
+        "11672364",
+        "12260782",
+        "12212756",
+        "11519116",
+        "12034916"
+      ],
+      "claim_count": 9,
+      "reasons": [],
+      "template_hash": "6c081bdaca2b923c693ebc1fbeee836317ea51ccfc2e38b9f6c57108d0dfe59e",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q08": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "MOHELA",
+      "input_value": "MOHELA",
+      "legal_company": "MOHELA",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "aeefa9469f56115542a1c0d123fd73042e7ef21b42571211ba92f176abd6ade5",
+    "executed_narrative_filters": {
+      "brand_name": "MOHELA",
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "MOHELA",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "12527629",
+        "14528126",
+        "11045511",
+        "9928146",
+        "11066491",
+        "8306359",
+        "8914260",
+        "10707812"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "cc71406529cafc327699395a36949c51e9ad66bad1038687aca35ad6c4d8cc82",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q09": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": false,
+      "reason": "This CFPB snapshot does not establish coverage of auto-insurance claims.",
+      "required_capability": "auto_insurance_claims",
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "This CFPB snapshot does not establish coverage of auto-insurance claims."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "coverage_check"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  },
+  "q10": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": null,
+      "snapshot_start": null
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "Expected operand value to be an int or a float for operator $gte, got 2025-07-01 in query."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "configuration_error"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  },
+  "q11": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "Cash App",
+      "input_value": "Cash App",
+      "legal_company": "Block, Inc.",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "a9894c8eeb16a938f21a965e97537024123a90e5eafe3bc11918712ef2b4a040",
+    "executed_narrative_filters": {
+      "brand_name": "Cash App",
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "Block, Inc.",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "Block, Inc."
+    ],
+    "structured_query": "SELECT \"company_response_to_consumer\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_response_month_metrics\" WHERE \"company\" = 'Block, Inc.' GROUP BY \"company_response_to_consumer\" ORDER BY sum(\"complaint_count\") DESC, \"company_response_to_consumer\" ASC LIMIT 10",
+    "structured_row_count": 2,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "17037140",
+        "18746199",
+        "17829176",
+        "11960699",
+        "17658840",
+        "12148630",
+        "11677601",
+        "11669140"
+      ],
+      "claim_count": 9,
+      "reasons": [],
+      "template_hash": "6c081bdaca2b923c693ebc1fbeee836317ea51ccfc2e38b9f6c57108d0dfe59e",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q12": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "33adeb88ac64620ce1ec47ed64701b3551530a910ad45a4555f72798c5738036",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "10584982",
+        "11567359",
+        "17883000",
+        "11760479",
+        "8551192",
+        "10174549",
+        "9029320",
+        "8875253"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "cc71406529cafc327699395a36949c51e9ad66bad1038687aca35ad6c4d8cc82",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q13": {
+    "accepted_citation_count": 8,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "TransUnion",
+      "input_value": "TransUnion",
+      "legal_company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "309a6739874998557f3b709edfe3e31601d2e78e83923d20ea74e4f7b69a24a9",
+    "executed_narrative_filters": {
+      "brand_name": "TransUnion",
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v1",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "11611196",
+        "14214408",
+        "15925425",
+        "9219096",
+        "9548947",
+        "13009428",
+        "9787216",
+        "11481504"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "cc71406529cafc327699395a36949c51e9ad66bad1038687aca35ad6c4d8cc82",
+      "validator_version": "draft-validator-v2"
+    }
+  },
+  "q14": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": null,
+      "snapshot_start": null
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "Expected operand value to be an int or a float for operator $gte, got 2024-01-01 in query."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "configuration_error"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  },
+  "q15": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": false,
+      "reason": "The CFPB response category does not contain a verified dollar amount of relief paid.",
+      "required_capability": "verified_relief_amount",
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "The CFPB response category does not contain a verified dollar amount of relief paid."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "coverage_check"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  }
+}

@@ -1,0 +1,756 @@
+{
+  "q01": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "d1d891e19d3959fb5f369e8384f613fa21eaddc0467cc5e1e213e044e6127fd4",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": "Debt collection",
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "Debt collection"
+    ],
+    "structured_query": "WITH counts AS (SELECT \"sub_issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"product_issue_sub_issue_month_metrics\" WHERE \"product\" = 'Debt collection' GROUP BY \"sub_issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "structured_row_count": 5,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "8933644",
+        "10674178",
+        "15461934"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "6b3287c67959b1d81c0d3d50261b60d2258d555ebf39bc9ae902a34a06cf4813",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q02": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "Cash App",
+      "input_value": "Cash App",
+      "legal_company": "Block, Inc.",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "2a444c701ca99b54e17059bf0d170d563612af0ea1852b19b0bd1dbd1404996f",
+    "executed_narrative_filters": {
+      "brand_name": "Cash App",
+      "company": null,
+      "company_response": null,
+      "end": "2026-01-01",
+      "issue": null,
+      "product": null,
+      "start": "2025-01-01",
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "Block, Inc.",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "Block, Inc.",
+      "2025-01-01",
+      "2026-01-01"
+    ],
+    "structured_query": "WITH counts AS (SELECT \"issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_issue_month_metrics\" WHERE \"company\" = 'Block, Inc.' AND \"complaint_month\" >= DATE '2025-01-01' AND \"complaint_month\" < DATE '2026-01-01' GROUP BY \"issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "structured_row_count": 5,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "17037140",
+        "11809016",
+        "14282974"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "6b3287c67959b1d81c0d3d50261b60d2258d555ebf39bc9ae902a34a06cf4813",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q03": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "1701e5fb0d9ba9635d64d3aa77fc19365ee9414218fa17370e1867827ec9df40",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": "Block, Inc.",
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": false
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": "WITH company_scope AS (SELECT \"company\", sum(\"complaint_count\") AS \"complaint_count\", sum(\"timely_response_count\") AS \"timely_response_count\", sum(\"timely_response_known_count\") AS \"timely_response_known_count\" FROM \"company_month_metrics\" GROUP BY \"company\"), volume_cohort AS (SELECT *, \"timely_response_count\"::DOUBLE / nullif(\"timely_response_known_count\", 0) AS \"timely_response_rate\" FROM company_scope ORDER BY \"complaint_count\" DESC, \"company\" ASC LIMIT 10) SELECT \"company\", \"complaint_count\", \"timely_response_count\", \"timely_response_known_count\", \"timely_response_rate\" FROM volume_cohort ORDER BY \"timely_response_rate\" ASC NULLS LAST, \"company\" ASC LIMIT 1",
+    "structured_row_count": 1,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "11899931",
+        "16902242",
+        "11908244"
+      ],
+      "claim_count": 4,
+      "reasons": [],
+      "template_hash": "a595cfb8dd3d72316eddce1bac2eeb211757ea30d0f80bf72ff7c80ba1a0fdef",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q04": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": false,
+      "reason": "The requested period begins before this snapshot's 2024-01-01 coverage.",
+      "required_capability": "date_range",
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "The requested period begins before this snapshot's 2024-01-01 coverage."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "coverage_check"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  },
+  "q05": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "145eee0368e370360c5f13f97167d80e804ae43c08df06e092ddb1d376738cf6",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": "Problem with a company's investigation into an existing problem",
+      "product": "Credit reporting or other personal consumer reports",
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "Credit reporting or other personal consumer reports",
+      "Problem with a company's investigation into an existing problem"
+    ],
+    "structured_query": "WITH counts AS (SELECT \"sub_issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"product_issue_sub_issue_month_metrics\" WHERE \"product\" = 'Credit reporting or other personal consumer reports' AND \"issue\" = 'Problem with a company''s investigation into an existing problem' GROUP BY \"sub_issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "structured_row_count": 5,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "8204618",
+        "9655097",
+        "8718573"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "6b3287c67959b1d81c0d3d50261b60d2258d555ebf39bc9ae902a34a06cf4813",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q06": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "Zelle",
+      "input_value": "Zelle",
+      "legal_company": "Early Warning Services, LLC",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "e734efd2380a9fdef2fc89b26920080c46472212de78250891a7a6bc80c6ac21",
+    "executed_narrative_filters": {
+      "brand_name": "Zelle",
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "Early Warning Services, LLC",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "11644248",
+        "11517406",
+        "11542930"
+      ],
+      "claim_count": 3,
+      "reasons": [],
+      "template_hash": "e01e2505431ac984a2781290f6da096cc34415ad93e1c646222e3c72b662f984",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q07": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "c0a86936efe536746011a34d3f3c3cef3f1a528b12352d196e31544cea20fd69",
+    "executed_narrative_filters": null,
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "2025-04-01",
+      "2025-07-01",
+      "2025-07-01",
+      "2025-10-01",
+      "2025-04-01",
+      "2025-10-01",
+      "2025-04-01",
+      "2025-07-01",
+      "2025-07-01",
+      "2025-10-01",
+      "2025-04-01",
+      "2025-10-01"
+    ],
+    "structured_query": "WITH company_counts AS (SELECT \"company\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'), 0) AS \"comparison_complaints\" FROM \"company_month_metrics\" WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-10-01' GROUP BY \"company\"), winner AS (SELECT *, \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_change\" FROM company_counts ORDER BY \"absolute_change\" DESC, \"company\" ASC LIMIT 1), issue_counts AS (SELECT coalesce(\"issue\", 'Unknown') AS \"issue\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-07-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2025-10-01'), 0) AS \"comparison_complaints\" FROM \"company_product_state_issue_month_metrics\" WHERE \"company\" = (SELECT \"company\" FROM winner) AND \"complaint_month\" >= DATE '2025-04-01' AND \"complaint_month\" < DATE '2025-10-01' GROUP BY \"issue\"), drivers AS (SELECT 'driver' AS \"row_type\", (SELECT \"company\" FROM winner) AS \"winner_company\", \"issue\", \"baseline_complaints\", \"comparison_complaints\", \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_change\", CASE WHEN \"baseline_complaints\" = 0 THEN NULL ELSE (\"comparison_complaints\" - \"baseline_complaints\")::DOUBLE / \"baseline_complaints\" END AS \"percentage_change\" FROM issue_counts), total AS (SELECT 'total' AS \"row_type\", \"company\" AS \"winner_company\", NULL::VARCHAR AS \"issue\", \"baseline_complaints\", \"comparison_complaints\", \"absolute_change\", CASE WHEN \"baseline_complaints\" = 0 THEN NULL ELSE \"absolute_change\"::DOUBLE / \"baseline_complaints\" END AS \"percentage_change\" FROM winner) SELECT * FROM total UNION ALL SELECT * FROM (SELECT * FROM drivers WHERE \"absolute_change\" > 0 ORDER BY \"absolute_change\" DESC, \"issue\" ASC LIMIT 3)",
+    "structured_row_count": 4,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [],
+      "claim_count": 4,
+      "reasons": [],
+      "template_hash": "140322db3e1c819f65eab1639704829de90d441a92852a2b4b94af14cf9e1894",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q08": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "MOHELA",
+      "input_value": "MOHELA",
+      "legal_company": "MOHELA",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "e023c884b7eebdfc16d2eddd9e6a1fe83ef66be9092bd826bee4912813a9f38e",
+    "executed_narrative_filters": {
+      "brand_name": "MOHELA",
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "MOHELA",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "MOHELA"
+    ],
+    "structured_query": "WITH counts AS (SELECT \"issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_issue_month_metrics\" WHERE \"company\" = 'MOHELA' GROUP BY \"issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "structured_row_count": 5,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "12527629",
+        "14528126",
+        "8306359"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "6b3287c67959b1d81c0d3d50261b60d2258d555ebf39bc9ae902a34a06cf4813",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q09": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": false,
+      "reason": "This CFPB snapshot does not establish coverage of auto-insurance claims.",
+      "required_capability": "auto_insurance_claims",
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "This CFPB snapshot does not establish coverage of auto-insurance claims."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "coverage_check"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  },
+  "q10": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "b61492005f579c619392db31617ca4d335861662d409df75bdaabbeafb23a7bd",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": "2026-01-01",
+      "issue": null,
+      "product": "Mortgage",
+      "start": "2025-07-01",
+      "state": "CA",
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "Mortgage",
+      "CA",
+      "2025-07-01",
+      "2026-01-01"
+    ],
+    "structured_query": "WITH counts AS (SELECT \"issue\" AS \"issue\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_product_state_issue_month_metrics\" WHERE \"product\" = 'Mortgage' AND \"state\" = 'CA' AND \"complaint_month\" >= DATE '2025-07-01' AND \"complaint_month\" < DATE '2026-01-01' GROUP BY \"issue\"), slice_total AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM counts) SELECT \"issue\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM counts CROSS JOIN slice_total ORDER BY \"complaint_count\" DESC, \"issue\" ASC LIMIT 5",
+    "structured_row_count": 5,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "14634056",
+        "17191435",
+        "15209793"
+      ],
+      "claim_count": 8,
+      "reasons": [],
+      "template_hash": "6b3287c67959b1d81c0d3d50261b60d2258d555ebf39bc9ae902a34a06cf4813",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q11": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "Cash App",
+      "input_value": "Cash App",
+      "legal_company": "Block, Inc.",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "5610137dc5314028f00bff9019e99bc2dd9997aa81ba1931541d25329f16d629",
+    "executed_narrative_filters": {
+      "brand_name": "Cash App",
+      "company": null,
+      "company_response": "Closed with explanation",
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "Block, Inc.",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "Block, Inc."
+    ],
+    "structured_query": "WITH category_counts AS (SELECT \"company_response_to_consumer\", sum(\"complaint_count\") AS \"complaint_count\" FROM \"company_response_month_metrics\" WHERE \"company\" = 'Block, Inc.' GROUP BY \"company_response_to_consumer\"), totals AS (SELECT sum(\"complaint_count\") AS \"total_complaints\" FROM category_counts) SELECT \"company_response_to_consumer\", \"complaint_count\", \"total_complaints\", \"complaint_count\"::DOUBLE / nullif(\"total_complaints\", 0) AS \"share\" FROM category_counts CROSS JOIN totals ORDER BY \"complaint_count\" DESC, \"company_response_to_consumer\" ASC",
+    "structured_row_count": 2,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "17037140",
+        "18746199",
+        "17829176"
+      ],
+      "claim_count": 5,
+      "reasons": [],
+      "template_hash": "373917a220f989602ae41ea3c28eb76d88298f81001baf8863636172058ac4b8",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q12": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "db0b1b225e912d7889266b72474393da8a2d0a185c9063d591e6f50452dfde8e",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "10584982",
+        "11760479",
+        "8551192"
+      ],
+      "claim_count": 3,
+      "reasons": [],
+      "template_hash": "e01e2505431ac984a2781290f6da096cc34415ad93e1c646222e3c72b662f984",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q13": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": {
+      "brand_name": "TransUnion",
+      "input_value": "TransUnion",
+      "legal_company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+      "status": "curated_alias"
+    },
+    "evidence_sha256": "b5d3924eacbeab93c62d8209bdef8ee5f3f3e07a915afffcb77f0ed07591a4d3",
+    "executed_narrative_filters": {
+      "brand_name": "TransUnion",
+      "company": null,
+      "company_response": null,
+      "end": null,
+      "issue": null,
+      "product": null,
+      "start": null,
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "resolve_company",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "11611196",
+        "14214408",
+        "8469214"
+      ],
+      "claim_count": 3,
+      "reasons": [],
+      "template_hash": "e01e2505431ac984a2781290f6da096cc34415ad93e1c646222e3c72b662f984",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q14": {
+    "accepted_citation_count": 3,
+    "coverage": {
+      "answerable": true,
+      "reason": null,
+      "required_capability": null,
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": "1924499e81fb899df72fc4b068bffea98c6f27e86c3fa35b513eb36ec646a696",
+    "executed_narrative_filters": {
+      "brand_name": null,
+      "company": null,
+      "company_response": null,
+      "end": "2026-01-01",
+      "issue": null,
+      "product": "Checking or savings account",
+      "start": "2024-01-01",
+      "state": null,
+      "sub_issue": null,
+      "sub_product": null,
+      "timely_response": null
+    },
+    "limitations": [],
+    "resolved_company": null,
+    "retrieval_status": "ok",
+    "retrieved_evidence_count": 8,
+    "steps": [
+      "coverage_check",
+      "run_structured_analysis",
+      "retrieve_narratives",
+      "synthesize",
+      "validate_draft"
+    ],
+    "structured_parameters": [
+      "2024-01-01",
+      "2025-01-01",
+      "2025-01-01",
+      "2026-01-01",
+      "Checking or savings account",
+      "2024-01-01",
+      "2026-01-01"
+    ],
+    "structured_query": "WITH issue_counts AS (SELECT coalesce(\"issue\", 'Unknown') AS \"issue\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2024-01-01' AND \"complaint_month\" < DATE '2025-01-01'), 0) AS \"baseline_complaints\", coalesce(sum(\"complaint_count\") FILTER (WHERE \"complaint_month\" >= DATE '2025-01-01' AND \"complaint_month\" < DATE '2026-01-01'), 0) AS \"comparison_complaints\" FROM \"company_product_state_issue_month_metrics\" WHERE \"product\" = 'Checking or savings account' AND \"complaint_month\" >= DATE '2024-01-01' AND \"complaint_month\" < DATE '2026-01-01' GROUP BY \"issue\"), drivers AS (SELECT 'driver' AS \"row_type\", \"issue\", \"baseline_complaints\", \"comparison_complaints\", \"comparison_complaints\" - \"baseline_complaints\" AS \"absolute_change\", CASE WHEN \"baseline_complaints\" = 0 THEN NULL ELSE (\"comparison_complaints\" - \"baseline_complaints\")::DOUBLE / \"baseline_complaints\" END AS \"percentage_change\" FROM issue_counts), total AS (SELECT 'total' AS \"row_type\", NULL::VARCHAR AS \"issue\", sum(\"baseline_complaints\") AS \"baseline_complaints\", sum(\"comparison_complaints\") AS \"comparison_complaints\", sum(\"absolute_change\") AS \"absolute_change\", CASE WHEN sum(\"baseline_complaints\") = 0 THEN NULL ELSE sum(\"absolute_change\")::DOUBLE / sum(\"baseline_complaints\") END AS \"percentage_change\" FROM drivers) SELECT * FROM total UNION ALL SELECT * FROM (SELECT * FROM drivers ORDER BY abs(\"absolute_change\") DESC, \"issue\" ASC LIMIT 3)",
+    "structured_row_count": 4,
+    "synthesis_adapter": "template-synthesis-v2",
+    "validation": {
+      "accepted": true,
+      "accepted_citation_ids": [
+        "12295127",
+        "10821142",
+        "9325375"
+      ],
+      "claim_count": 7,
+      "reasons": [],
+      "template_hash": "f08304db502c8a032accb9a774a8b01ec02aff16a4041777ff718fe7a70ec45f",
+      "validator_version": "draft-validator-v5"
+    }
+  },
+  "q15": {
+    "accepted_citation_count": 0,
+    "coverage": {
+      "answerable": false,
+      "reason": "The CFPB response category does not contain a verified dollar amount of relief paid.",
+      "required_capability": "verified_relief_amount",
+      "snapshot_end": "2025-12-31",
+      "snapshot_start": "2024-01-01"
+    },
+    "entity_resolution": null,
+    "evidence_sha256": null,
+    "executed_narrative_filters": null,
+    "limitations": [
+      "The CFPB response category does not contain a verified dollar amount of relief paid."
+    ],
+    "resolved_company": null,
+    "retrieval_status": null,
+    "retrieved_evidence_count": 0,
+    "steps": [
+      "coverage_check"
+    ],
+    "structured_parameters": [],
+    "structured_query": null,
+    "structured_row_count": 0,
+    "synthesis_adapter": null,
+    "validation": null
+  }
+}
