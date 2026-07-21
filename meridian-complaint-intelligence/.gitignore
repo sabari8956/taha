@@ -25,3 +25,14 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
+
+# Rebuildable local medallion data and vector index (large; code and layer READMEs are tracked)
+data/*.duckdb
+bronze/.generations/
+bronze/current
+silver/.generations/
+silver/current
+gold/.generations/
+gold/current
+artifacts/rag/
+artifacts/run/

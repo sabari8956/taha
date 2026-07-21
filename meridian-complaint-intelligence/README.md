@@ -2,7 +2,7 @@
 
 An auditable LangGraph prototype for answering structured and narrative questions over the CFPB Consumer Complaint Database.
 
-See [PRD.md](PRD.md) for product scope and [AGENTS.md](AGENTS.md) for the required engineering/review workflow.
+See [PRD.md](PRD.md) for product scope, [docs/DELIVERY.md](docs/DELIVERY.md) for a Reference-Pack-to-file checklist, [DECISIONS.md](DECISIONS.md) for the delivery write-up, [EVALUATION.md](EVALUATION.md) for validation evidence, and [AGENTS.md](AGENTS.md) for the engineering workflow.
 
 ## Setup
 
@@ -83,7 +83,7 @@ errors return a generic JSON `500` and are logged without returning internal det
 requests may require the configured embedding-provider environment variables; do not put those
 credentials in request payloads or source control.
 
-> The graph and tool contracts are real; tool data results are still mock placeholders. The next milestone replaces them with pipeline-backed DuckDB and retrieval implementations.
+> `main.py` is a diagram/mock-only illustration. Production execution is `python -m meridian_assistant` and uses the pipeline-backed DuckDB/RAG adapters.
 
 ## Local input data
 
@@ -91,7 +91,7 @@ credentials in request payloads or source control.
 
 ## Reproducible DuckDB medallion build
 
-All generated layer databases and reports are ignored. Build each layer explicitly:
+Large generated layer databases, RAG indexes, and the raw source are deliberately excluded from Git. The committed `bronze/README.md`, `silver/README.md`, and `gold/README.md` document each stage; build the generated artifacts explicitly:
 
 ```bash
 PYTHONPATH=src uv run python -m meridian_assistant.bronze \
@@ -158,3 +158,25 @@ longer than 6,000 characters are deliberately truncated, and the manifest record
 **Data handling:** building/querying with the default embedding function sends narrative text to
 OpenAI to create query and document embeddings. This is an external-processing boundary; use it
 only when that handling is approved for the dataset.
+
+## Delivery inventory
+
+| Reference-pack deliverable | Location |
+|---|---|
+| Rebuildable Bronze → Silver → Gold pipeline | `src/meridian_assistant/{bronze,silver,gold,publication}.py` |
+| Layer contracts and build commands | `bronze/README.md`, `silver/README.md`, `gold/README.md` |
+| Guarded NL → Gold SQL harness | `src/meridian_assistant/analytics.py` |
+| Metadata-filtered RAG builder/retriever | `scripts/build_rag_index.py`, `src/meridian_assistant/retrieval.py` |
+| LLM planning, grounded narration, API | `semantic_planner.py`, `synthesis.py`, `api.py` |
+| Fifteen generated answer records | `answers.json` |
+| Evidence and tool traces for the latest packaged local run | `artifacts/run/.final-15-v4.a4o94doa/` |
+| Decisions/write-up | `DECISIONS.md` |
+| Evaluation/checks and limits | `EVALUATION.md` |
+
+### Quick path
+
+If a reviewer has an already-built local data generation and RAG generation, point the
+service at those `current` paths and run the Flask server. If not, use the layer build
+commands above in order, then build the documented RAG working set. `answers.json` is a
+checked-in generated delivery artifact from the pinned snapshot; regenerate it with a
+distinct batch run ID after rebuilding input artifacts.

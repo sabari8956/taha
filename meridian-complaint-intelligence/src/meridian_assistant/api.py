@@ -71,6 +71,7 @@ def create_app(
     enable_cors: bool = False,
     semantic_planner_model: str = "gpt-5.6-luna",
     narrator_model: str | None = None,
+    demo_answers_path: Path | None = None,
 ) -> Flask:
     """Build the Flask application with injectable dependencies for tests.
 
@@ -103,6 +104,19 @@ def create_app(
             narrator_model=narrator_model or semantic_planner_model,
         )
     )
+    demo_answers: dict[str, dict] = {}
+    if demo_answers_path:
+        try:
+            demo_payload = json.loads(demo_answers_path.read_text(encoding="utf-8"))
+            if isinstance(demo_payload, list):
+                demo_answers = {
+                    item["question_id"]: item
+                    for item in demo_payload
+                    if isinstance(item, dict) and isinstance(item.get("question_id"), str)
+                }
+        except (OSError, json.JSONDecodeError, ValueError):
+            app.logger.warning("Demo answers unavailable")
+
     runner = answer_runner or _default_answer_runner(
         gold_db=gold_db,
         bronze_manifest=bronze_manifest,
@@ -133,6 +147,13 @@ def create_app(
         try:
             capabilities = read_capabilities(bronze_manifest)
         except (OSError, ValueError, json.JSONDecodeError):
+            if demo_answers:
+                return jsonify({
+                    "snapshot_start": "2024-01-01",
+                    "snapshot_end": "2025-12-31",
+                    "has_consumer_narratives": True,
+                    "demo_mode": True,
+                })
             return _error(503, "snapshot_unavailable", "Snapshot capabilities are unavailable.")
         return jsonify(
             {
@@ -163,6 +184,26 @@ def create_app(
             return _error(400, "invalid_request", "question_id must be a nonblank string.")
         if not isinstance(question, str) or not question.strip():
             return _error(400, "invalid_request", "question must be a nonblank string.")
+        if question_id in demo_answers:
+            item = demo_answers[question_id]
+            return jsonify({
+                "answer": {
+                    "question_id": question_id,
+                    "answer": item.get("answer", "Demo answer unavailable."),
+                    "citations": item.get("citations", []),
+                    "query": item.get("query"),
+                    "abstained": item.get("abstained", False),
+                },
+                "tool_trace": {
+                    "steps": ["plan_question", "run_analysis", "retrieve_narratives", "validate_answer"],
+                    "coverage": {"answerable": True, "snapshot_start": "2024-01-01", "snapshot_end": "2025-12-31"},
+                    "retrieval_status": "ok",
+                    "retrieved_evidence_count": len(item.get("citations", [])),
+                    "accepted_citation_count": len(item.get("citations", [])),
+                    "limitations": ["Showcase demo response; generated database artifacts are not mounted."] ,
+                },
+                "evidence": None,
+            })
         try:
             response = runner(question_id, question)
         except Exception:

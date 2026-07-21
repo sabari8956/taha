@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir uv \
 COPY src ./src
 COPY scripts ./scripts
 COPY data/questions.json ./data/questions.json
+COPY data/demo_answers.json ./data/demo_answers.json
 COPY railway_app.py ./railway_app.py
 COPY railway-entrypoint.sh ./railway-entrypoint.sh
 RUN chmod +x railway-entrypoint.sh
