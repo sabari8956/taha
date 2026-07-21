@@ -1,0 +1,12 @@
+.venv
+.git
+.pytest_cache
+.ruff_cache
+__pycache__
+.env
+.env.*
+bronze
+silver
+gold
+artifacts/rag
+*.duckdb
